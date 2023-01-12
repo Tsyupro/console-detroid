@@ -1,10 +1,10 @@
 ﻿namespace Détroit
 {
-    class Game
+     public class Game
     {
         bool name = false,gun=false,reason=false;
         
-        int success = 50;
+        public int success = 50;
         public void Scene_Beginning()
         {
             int test;
@@ -313,7 +313,7 @@
             }
             Console.WriteLine();
         }
-        private int Choice(int maxNumber)
+        public int Choice(int maxNumber)
         {
             Console.WriteLine("Ваш вибiр : ");
             string? tmp = Console.ReadLine();
