@@ -2,9 +2,9 @@
 
 namespace Détroit
 {
-    static class FileGameHelper
+    static class GameProgress
     {
-        public static void RecordАFile(Gamer player,Game gamer)
+        public static void SetProgress(Player player,Game gamer)
         {
             try
             {
@@ -14,7 +14,7 @@ namespace Détroit
                     {
                         using (StreamWriter sw = new StreamWriter(stream))
                         {
-                            sw.Write("Name " + player.name + " | age " + Convert.ToString(player.age) + " | % " + Convert.ToString(gamer.success));
+                            sw.WriteLine("Name " + player.name + " | age " + Convert.ToString(player.age) + " | % " + Convert.ToString(gamer.success));
                         }                          
                     }
                 }
@@ -24,7 +24,7 @@ namespace Détroit
                     {
                         using (StreamWriter sw = new StreamWriter(stream))
                         {
-                            sw.Write("Name " + player.name + " | age " + Convert.ToString(player.age) + " | % " + Convert.ToString(gamer.success));
+                            sw.WriteLine("Name " + player.name + " | age " + Convert.ToString(player.age) + " | % " + Convert.ToString(gamer.success));
                         }
                     }
                 }
@@ -37,7 +37,7 @@ namespace Détroit
             }
             
         }
-       public  static void Text_Output()
+       public  static void GetProgress()
         {
             try 
             {

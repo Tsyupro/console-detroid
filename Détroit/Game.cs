@@ -365,7 +365,33 @@
             }
             Console.WriteLine();
         }
+        public void Start(Game game)
+        {
+            int a = 1;
+            Player player = SetPlayer.information();
+            while (a != 3)
+            {
+                Console.WriteLine(" 1 - Розпочати гру\n 2- Таблиця рекордів\n 3-Вийти з гри ");
+                a = game.Choice(3);
 
+                if (a == 1)
+                {
+                    game.Scene_Beginning();
+                    game.Scene_Evidence();
+                    game.Scene_Balcony();
+                    GameProgress.SetProgress(player, game);
+                }
+                else if (a == 2)
+                {
+                    GameProgress.GetProgress();
+                }
+                else if (a == 3)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Дякуємо за гру!");
+                }
+            }
+        }
 
     }
 }
